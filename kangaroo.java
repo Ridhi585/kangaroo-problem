@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
 public class kangaroo {
+
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
         int x1 = sc.nextInt();
@@ -11,22 +13,20 @@ public class kangaroo {
 
         if (x1 == x2) {
             System.out.println("YES");
-        } else if (x1 < x2 && v1 > v2) {
-           int r1=(x2 - x1) % (v1 - v2);
-           if (r1==0){
-               System.out.println("YES");
-           }else {
-               System.out.println("NO");
-           }
-        } else if (x2 < x1 && v2 > v1) {
-           int r2=(x1 - x2) % (v2 - v1);
-            if (r2==0){
+        }
+        else if (x1 < x2 && v1 > v2) {
+
+            if ((x2 - x1) % (v1 - v2) == 0) {
                 System.out.println("YES");
-            }else {
+            }
+            else {
                 System.out.println("NO");
             }
-        }else {
+        }
+        else {
             System.out.println("NO");
         }
+
+        sc.close();
     }
 }
